@@ -93,7 +93,7 @@ function ValidUrl() {
  }
 //funSweetalert
 function swal() {
-    Swal.fire({
+    swal.fire({
     title: "Site Name or Url is not valid, Please follow the rules below :",
     text: "Site name must contain at least one uppercase letter 'Site URL must be a valid one'",
     icon: "question"
