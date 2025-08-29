@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <!-- Link icon-tab -->
+    <link rel="icon" href="image/bookmark.png">
+    <!-- Link font preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <!-- Link font PT Sans Caption -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Righteous&display=swap"
+        rel="stylesheet">
+    <!-- Link font Righteous -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <!-- Link font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link boot strap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Link main css -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header class="container p-2">
+        <div class="container d-flex flex-column justify-content-center align-items-center p-5">
+            <h1 class="position-relative">Bookmarker</h1>
+        </div>
+    </header>
+    <main>
+        <section class="container borderSection mt-1 py-4">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <h2>
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+                <div class="mt-4 w-100 d-flex flex-column justify-content-center">
+                    <label class="pb-2" for="nameBook"><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+                    <input oninput="validationName()" type="text" class="form-control w-100 rounded-2" id="nameBook"
+                        placeholder="Bookmark Name">
+                </div>
+                <div class="mt-4 w-100 d-flex flex-column justify-content-center">
+                    <label class="pb-2" for="bookmarkURL"><i class="fa-solid fa-link-slash"></i> Site URL</label>
+                    <input oninput="ValidUrl()" type="url" class="form-control w-100 rounded-2" id="bookmarkURL" placeholder="Website URL">
+                </div>
+                <button onclick="addBook()" type="button" class="btn btn-primary mt-4 px-5"
+                    data-bs-toggle="button">Submit</button>
+            </div>
+        </section>
+        <section class="container borderSection px-0 mt-1">
+            <table class="table text-center mt-4">
+                <thead>
+                    <tr>
+                        <th class="text-capitalize">Index</th>
+                        <th class="text-capitalize">Website Name</th>
+                        <th class="text-capitalize">Visit</th>
+                        <th class="text-capitalize">Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="data">
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
