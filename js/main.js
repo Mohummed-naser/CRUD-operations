@@ -17,8 +17,9 @@ function addBook() {
     localStorage.setItem('arrayList' , JSON.stringify(list));
     display();
     clear();
+    } else {
+        swal()//funSweetalert
     }
-    swal()//funSweetalert
 }
 //functionForClearInput
 function clear() {
